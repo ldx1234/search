@@ -18,7 +18,7 @@ class SearchManager:
             if platform in self.clients:
                 try:
                     client = self.clients[platform]
-                    result = client.search(query, size)
+                    result = client.search(query)
                     results[platform] = {'success': True, 'data': result}
                 except SearchAPIError as e:
                     results[platform] = {
